@@ -1,5 +1,5 @@
 # html5-css-omnifood
-A Responsive website for the course "Design and Develop a Killer Website Using HTML5 and CSS3".
+A responsive website for the course "Design and Develop a Killer Website Using HTML5 and CSS3".
 
 Reference https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3
 
