@@ -340,9 +340,16 @@ I was looking for a quick and easy food delivery service in San Franciso. I trie
                     <h2>We're happy to hear from you</h2>
                 </div>
                 <div class="row">
-                    <form class="contact-form">
+                    <form method="post" action="mailer.php" class="contact-form">
                         <div class="row"> 
                             <div class="col">&nbsp;</div>
+                            <?php
+                            if ($_GET['success'] == 1) {
+                                echo "<div class=\"form-messages success\">Thank you! Your message has been sent.</div>";
+                            } else {
+                                echo "<div class=\"form-messages error\">Oops! Something went wrong, please try again.</div>";
+                            }
+                            ?>
                         </div>
                         <div class="row">
                             <div class="col span-1-of-3">
