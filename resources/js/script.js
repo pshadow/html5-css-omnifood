@@ -52,7 +52,7 @@ $(document).ready(function() {
     }, {
         offset: '50%'
     });
-    
+
     $('.js--wp-3').waypoint(function(direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
@@ -82,21 +82,19 @@ $(document).ready(function() {
         }
     });
 
-    /* Maps */
-    var map = new GMaps({
-      div: '.map',
-      lat: 38.7436266,
-      lng: -9.05,
-      zoom: 12
-    });
-
-    map.addMarker({
-      lat: 38.7436266,
-      lng: -9.1602037,
-      title: 'Lima',
-      infoWindow: {
-      content: '<p>Our Lisbon HQ</p>'
-      }
-    });
-
 });
+
+
+/* Maps */
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: {lat: 38.7436266, lng: -9.05}
+  });
+
+  var marker = new google.maps.Marker({
+    position: {lat: 38.7436266, lng: -9.1602037},
+    map: map,
+    title: 'Lima'
+  });
+}
