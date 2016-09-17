@@ -92,9 +92,16 @@ function initMap() {
     center: {lat: 38.7436266, lng: -9.05}
   });
 
+  var infowindow = new google.maps.InfoWindow({
+    content: '<p>Our Lisbon HQ</p>'
+  });
+
   var marker = new google.maps.Marker({
     position: {lat: 38.7436266, lng: -9.1602037},
     map: map,
-    title: 'Lima'
+    title: 'Lisbon'
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
   });
 }
